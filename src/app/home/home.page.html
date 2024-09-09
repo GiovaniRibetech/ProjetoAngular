@@ -1,18 +1,24 @@
-  <div id="container">
-    <ion-list>
-      <ion-item>
-        <ion-input type="number" [(ngModel)]="gasolina" label="Preço Gasolina" ></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="number" [(ngModel)]="alcool" label="Preço Álcool"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-button type="submit" (click)="calcularBene">Calcular</ion-button>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Situação</ion-label>
-        <ion-input [value]="situacao" readonly></ion-input>
-      </ion-item>
-    </ion-list>
-  </div>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cálculo de Rendimento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="gasolina" label="Preço Gasolina"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="alcool" label="Preço Álcool"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button type="submit" (click)="calcularBene()">Calcular</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Situação</ion-label>
+      <ion-input [value]="situacao" readonly></ion-input>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
