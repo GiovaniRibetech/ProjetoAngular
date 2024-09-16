@@ -10,7 +10,7 @@
 
   <ion-list>
     <ion-item>
-      <ion-input labelPlacement="floating" label="nome" [(ngModel)] = "nome"></ion-input>
+      <ion-input labelPlacement="floating" label="nome" [(ngModel)]="nome"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -19,11 +19,11 @@
   </ion-item>
 
   <ion-list>
-    <ion-item *ngFor="let item of items">
+    <ion-item *ngFor="let item of items; let posicao = index">
       <ion-label>
         {{item.titulo}}
       </ion-label>
-      <ion-button slot="end" color="white">
+      <ion-button slot="end" color="white" (click) = "remover(posicao)">
         <ion-icon slot="icon-only" name="trash-outline" color="danger"></ion-icon>
       </ion-button>
     </ion-item>

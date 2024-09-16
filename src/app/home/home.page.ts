@@ -31,8 +31,12 @@ export class HomePage {
 
   constructor() { }
 
-  adicionar(){
-    this.items.push({ titulo: this.nome});
+  adicionar() {
+    this.items.push({ titulo: this.nome });
     this.nome = "";
+  }
+
+  remover(posicao: number) {
+    this.items.splice(posicao, 1)
   }
 }
